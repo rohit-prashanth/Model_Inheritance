@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from .models import StudentDetail,MultiTableModel
+from .models import StudentDetail
 # Create your views here.
 def home(request):
     obj = StudentDetail.objects.all()
-    obj1 = MultiTableModel.objects.all()
-    return render(request,'home.html',{'obj':obj,'obj1':obj1})
+    return render(request,'home.html',{'obj':obj})
 
